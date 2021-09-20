@@ -1,4 +1,4 @@
-# A lint rule for avoid if !bool and suggest if not_bool
+# A lint rule for avoid `!bool` and suggest `not_bool` or `bool == false` as an alternative
 
 When doing kernel development or filesystem development, or any security work for that matter.  Conditional statements that check for permissions are
 a sore source of problems and errors.
