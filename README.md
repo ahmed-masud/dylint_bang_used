@@ -1,4 +1,12 @@
-# Template Dylint library
+# A lint rule for avoid if !bool and suggest if not_bool
+
+When doing kernel development or filesystem development, or any security work for that matter.  Conditional statements that check for permissions are
+a sore source of problems and errors.
+
+I typically find that doing something `if !foo` can be easily missed at a glance compared to `if not_foo` or `if false == is_foo` or `if is_not_foo`
+I want a lint that suggests that any statement like `!foo` be replaced by `not_foo` or `foo == false` anyhow that's just me. We'll see if it causes issues or creates more robust code.
+
+# Template created from Dylint library
 
 [Dylint](https://github.com/trailofbits/dylint) is a tool for running Rust lints from dynamic libraries. This repository is a "blank slate" Dylint library.
 
